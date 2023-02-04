@@ -25,17 +25,19 @@ class Person:
 
 # Text processing
 def process_lines(text):
-    dictP = {}
+    dictP = {} # Dictionary of Person objects we will return
+    # Iterates through lines and splits strings by commas into a list
     for line in text:
         fields = line.split(",")
-        last = fields[0].capitalize()
+        last = fields[0].capitalize()  # Capitalize Last and First name
         first = fields[1].capitalize()
-        if not fields[2]:
+        if not fields[2]:  # If there is no middle name put 'X'
             middle = 'X'
         else:
             middle = fields[2].upper()
 
         # r denotes a raw string and keeps newlines and tab spaces, This is useful when dealing with regex
+        # Use regex to check if id is in correct format, if not prompt user for valid id
         matchID = re.match(r'^[A-Z]{2}[0-9]{4}$', fields[3])
         if not matchID:
             print("ID invalid: " + fields[3])
@@ -44,7 +46,8 @@ def process_lines(text):
         else:
             id = fields[3]
 
-        matchPhone = re.match(r'^[0-9]{3} - [0-9]{3} - [0-9]{4}$', fields[4])
+        # Use regex to check if phone number is in correct format, if not prompt user for valid phone number
+        matchPhone = re.match(r'^[0-9]{3}-[0-9]{3}-[0-9]{4}$', fields[4])
         if not matchPhone:
             print("Phone " + fields[4] + " is invalid")
             print("Enter phone number in form 123-456-7890")
@@ -52,9 +55,11 @@ def process_lines(text):
         else:
             number = fields[4]
 
+        # Check for duplicate id and print error message if found
         if id in dictP.keys():
             print("Error: Duplicate id's found for this id: " + id)
             quit()
+        # Create Person object with corrected data and add it to dictionary with id as key
         dictP[id] = Person(last, first, middle, id, number)
 
     return dictP
