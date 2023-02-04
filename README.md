@@ -5,6 +5,7 @@ Here is a link to my [Overview of NLP](https://github.com/TediDika/Portfolio/blo
 
 
 ##Assignment 1
-[Link to overview]()
+
+[Link to overview](https://github.com/TediDika/Portfolio/blob/main/Homework1/Overview%20of%20Assignment%201.pdf)
 
 [Link to code](https://github.com/TediDika/Portfolio/blob/main/Homework1/Homework1_txd190008.py)
