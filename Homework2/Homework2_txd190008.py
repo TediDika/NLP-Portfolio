@@ -31,33 +31,7 @@ def preprocess(raw_text):
     return removedStops, nounLemmas
 
 
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print('Error: Please enter a filename as a system arg')
-        quit()
-
-    # OS file reading compatibility
-    rel_path = sys.argv[1]
-    with open(pathlib.Path.cwd().joinpath(rel_path), 'r') as f:
-        text_in = f.read()
-
-    # Calculate Lexical Diversity, # of unique tokens/total # of tokens
-    tokenizedText = word_tokenize(text_in)
-    set1 = set(tokenizedText)
-    print("\nLexical diversity: %.2f" % (len(set1) / len(tokenizedText)))
-
-    partATokens, nouns = preprocess(text_in)
-
-    # Make a dictionary of {noun:count of noun in tokens} and print 50 most common words
-    counts = {t:partATokens.count(t) for t in nouns}
-    sorted_counts = sorted(counts.items(), key=lambda x: x[1], reverse=True)
-    print("\n50 most common words:")
-    listOfWords = []
-    for i in range(50):
-        print(sorted_counts[i])
-        listOfWords.append(sorted_counts[i][0])
-
-    # Guessing Game
+def guessing_game(listOfWords):
     print("\nLets play a word guessing game!")
     TotalPoints = 5
     while True:
@@ -108,3 +82,32 @@ if __name__ == '__main__':
         else:
             print("\nGuess another word")
     print("\nGame Over!")
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print('Error: Please enter a filename as a system arg')
+        quit()
+
+    # OS file reading compatibility
+    rel_path = sys.argv[1]
+    with open(pathlib.Path.cwd().joinpath(rel_path), 'r') as f:
+        text_in = f.read()
+
+    # Calculate Lexical Diversity, # of unique tokens/total # of tokens
+    tokenizedText = word_tokenize(text_in)
+    set1 = set(tokenizedText)
+    print("\nLexical diversity: %.2f" % (len(set1) / len(tokenizedText)))
+
+    partATokens, nouns = preprocess(text_in)
+
+    # Make a dictionary of {noun:count of noun in tokens} and print 50 most common words
+    counts = {t:partATokens.count(t) for t in nouns}
+    sorted_counts = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+    print("\n50 most common words:")
+    listOfWords = []
+    for i in range(50):
+        print(sorted_counts[i])
+        listOfWords.append(sorted_counts[i][0])
+
+    guessing_game(listOfWords)
