@@ -69,7 +69,6 @@ if __name__ == '__main__':
         for i in randomWord:
             printList.append("_")
             print('_', end=" ")
-        print("\nForsenCD:", randomWord)
         while True:
             guess = input("\nGuess a letter:")
             # Game ends when "!" is input
