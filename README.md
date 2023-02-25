@@ -16,6 +16,6 @@ Here is a link to my [Overview of NLP](https://github.com/TediDika/Portfolio/blo
 This program uses the Natural Language Toolkit (NLTK) python library to preprocess text, by first tokenizing the text and then removing stop words and non-alphabetic charachters, lemmatizing, and extracting nouns. It randomly selects one of these nouns in a guessing game. To run the program make sure to set the filepath of your data as a sys arg.
 
 ## Assignment 3
-[Link to notebook] (https://github.com/TediDika/Portfolio/blob/main/Homework3.ipynb)
+[Link to notebook](https://github.com/TediDika/Portfolio/blob/main/Homework3.ipynb)
 
 Exploring the WordNet and SentiWordNet functions like word similarity, sentiment analysis, and collocation identification.
