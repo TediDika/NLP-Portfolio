@@ -22,3 +22,6 @@ Exploring the WordNet and SentiWordNet functions like word similarity, sentiment
 
 ## Assignment 4
 This assignment uses n-grams to predict which langauge given text is in. This assignment has two programs. The [first program](https://github.com/TediDika/Portfolio/blob/main/Homework4/program1.py) creates bigram and unigram dictionaries for English, French, and Italian using the provided training data where the key is the unigram or bigram text and the value is the count of that unigram or bigram in the data. The [second program](https://github.com/TediDika/Portfolio/blob/main/Homework4/program2.py) feeds in the test data and calculates probabilities for each language line-by-line and outputs accuracy. [This narrative](https://github.com/TediDika/Portfolio/blob/main/Homework4/Assignment%204%20-%20Narrative.pdf) delves deeper into the utility of n-grams.
+
+## Assignment 5
+In [this document](https://github.com/TediDika/Portfolio/blob/main/Homework5/parsing.pdf) I use PSG, SRT, and dependecy parsing to parse a sentence, and talk about the pros and cons of each method.
