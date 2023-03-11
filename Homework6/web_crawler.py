@@ -1,4 +1,6 @@
 import pathlib
+
+import nltk
 import requests
 import re
 from bs4 import BeautifulSoup
@@ -115,11 +117,37 @@ def important_terms(urls):
 
     # sort by highest occurring words and print
     sorted_tf = sorted(tf_dict.items(), key=lambda x: x[1], reverse=True)
-    print('Top 25 terms using tf:')
+    print('\nTop 25 terms using tf:')
     for i in range(25):
         print(sorted_tf[i])
 
+    # Knowledge Base Creation
+    top_10 = {'anime': [], 'attack': [], 'titan': [], 'season': [], 'film': [], 'theme': [], 'funimation': [],
+              'isayama': [], 'eren': [], 'television': []}
 
+    sentences = sent_tokenize(combined_text.lower())
+
+    for sentence in sentences:
+        for key, value in top_10.items():
+            if key in sentence:
+                value.append(sentence)
+
+    '''
+    # Print the knowledge base
+    for key in top_10:
+        print(key + ':')
+        for sentence in top_10[key]:
+            print('\t' + sentence)
+'''
+    print("\nFirst five sentences contained for each term in the Knowledge Base:\n")
+    for key, value in top_10.items():
+        print(key + ":")
+        for i in range(0, 5):
+            print(value[i] + "\t")
+        print("")
+
+    # Pickle the knowledge base
+    pickle.dump(top_10, open('top_10.pickle', 'wb'))
 
 
 if __name__ == '__main__':
@@ -127,3 +155,6 @@ if __name__ == '__main__':
     scrape_page(url_list)
     clean_text(url_list)
     important_terms(url_list)
+
+
+
