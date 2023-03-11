@@ -53,11 +53,77 @@ def scrape_page(urls):
         current_file = open(('text' + str(counter) + '.txt'), 'w', encoding="utf-8")
 
         current_soup = BeautifulSoup(current_page.content, 'html.parser')
+
+        # kill all script and style elements
+        for script in current_soup(["script", "style"]):
+            script.extract()  # rip it out
+
         for p in current_soup.select('p'):
             current_file.write(p.get_text() + '\n')
 
+
+
         counter += 1
+    print("end of scraper")
+
+def clean_text(urls):
+
+    counter = 1
+    for url in urls:
+        with open(('text' + str(counter) + '.txt'), 'r', encoding="utf-8") as page:
+            text = page.read()
+
+
+        # Delete newlines and tabs first
+        no_tabs = re.sub('\s+', ' ', text)
+        #  Extract sentences with NLTK’s sentence tokenizer
+        sentences = sent_tokenize(no_tabs)
+        # Write the sentences for each file to a new file
+        with open(('clean' + str(counter) + '.txt'), 'w', encoding="utf-8") as cleaned_text:
+            for sentence in sentences:
+                cleaned_text.write(sentence + '\n')
+        counter += 1
+
+    print("end of cleaner")
+
+
+def important_terms(urls):
+
+    # Combine text from all cleaned files
+    combined_text = ""
+    counter = 1
+    for url in urls:
+        with open(('clean' + str(counter) + '.txt'), 'r', encoding="utf-8") as page:
+            text = page.read()
+        combined_text += text
+        counter += 1
+
+    # extract all tokens, make text lowercase and remove non alphas and stop words
+    tokens = word_tokenize(combined_text)
+    tokens = [t.lower() for t in word_tokenize(combined_text) if t.isalpha()]
+    stop_words = stopwords.words('english')
+    tokens = [token for token in tokens if token not in stop_words]
+
+    # Creating tf dict, get term frequencies
+    tf_dict = {}
+    token_set = set(tokens)
+    tf_dict = {t: tokens.count(t) for t in token_set}
+
+    # normalize tf by number of tokens
+    for t in tf_dict.keys():
+        tf_dict[t] = tf_dict[t] / len(tokens)
+
+    # sort by highest occurring words and print
+    sorted_tf = sorted(tf_dict.items(), key=lambda x: x[1], reverse=True)
+    print('Top 25 terms using tf:')
+    for i in range(25):
+        print(sorted_tf[i])
+
+
+
 
 if __name__ == '__main__':
     url_list = web_crawl()
     scrape_page(url_list)
+    clean_text(url_list)
+    important_terms(url_list)
