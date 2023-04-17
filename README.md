@@ -31,3 +31,9 @@ In [this assignment](https://github.com/TediDika/Portfolio/blob/main/Homework6/w
 
 ## Assignment 7
 In [this assignment](https://github.com/TediDika/Portfolio/blob/main/Homework7/Assignment7.ipynb) I learned how to perform text proccesing and classfication using three different methods: Naive Bayes, Linear Regression, and Neural Networks.
+
+## Assignment 8
+In [this essay](https://github.com/TediDika/NLP-Portfolio/blob/main/Homework8/ACL%20Paper%20Summary.pdf) I summarized the ACL Paper 'Automated Crossword Solving" the paper discusses applying machine learning NLP techniques to a crossword solving bot. The bot was entered into a top national crossword solving competition and was the first computer program to beat all human competitors.
+
+## Assignment 9
+In [this assignment](https://github.com/TediDika/NLP-Portfolio/blob/main/Homework9/chatbot.py) I built a chatbot named SweetBot that will generate dessert recipes. The bot will save and remember the users name and food allergies into a csv file. It will extract the user's name with spaCy NER and the user's food allergies with NLTK POS Tagging from given input. Finally the bot makes API calls to GPT-3.5-Turbo to utilize its extensive knowledge base.
