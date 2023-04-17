@@ -25,3 +25,9 @@ This assignment uses n-grams to predict which langauge given text is in. This as
 
 ## Assignment 5
 In [this document](https://github.com/TediDika/Portfolio/blob/main/Homework5/parsing.pdf) I use PSG, SRT, and dependecy parsing to parse a sentence, and talk about the pros and cons of each method.
+
+## Assignment 6
+In [this assignment](https://github.com/TediDika/Portfolio/blob/main/Homework6/web_crawler.py) I use web crawling and scraping to form a knowledge base. [Overview](https://github.com/TediDika/Portfolio/blob/main/Homework6/Overview%20of%20Assignment6.pdf)
+
+## Assignment 7
+In [this assignment](https://github.com/TediDika/Portfolio/blob/main/Homework7/Assignment7.ipynb) I learned how to perform text proccesing and classfication using three different methods: Naive Bayes, Linear Regression, and Neural Networks.
