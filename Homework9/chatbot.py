@@ -13,7 +13,7 @@ from nltk.stem import WordNetLemmatizer
 # nltk.download('omw-1.4')
 # spacy.cli.download("en_core_web_sm")
 
-openai.api_key = "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"
+openai.api_key = "Enter API Key Here"
 
 messages = [
     {"role": "system", "content": "You are SweetBot, a dessert recipe chatbot. "
