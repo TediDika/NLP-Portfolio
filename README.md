@@ -5,13 +5,13 @@ Here is a link to my [Overview of NLP](https://github.com/TediDika/Portfolio/blo
 
 
 ## Assignment 1 - Text Processing
-In [this assignment](https://github.com/TediDika/Portfolio/blob/main/Homework01/Homework01_txd190008.py) I gained experience with processing text from a csv file using regex and pickling files in python. [Link to overview](https://github.com/TediDika/Portfolio/blob/main/Homework01/Overview%20of%20Assignment%201.pdf)
+In [this assignment](https://github.com/TediDika/Portfolio/blob/main/Homework01/Homework1_txd190008.py) I gained experience with processing text from a csv file using regex and pickling files in python. [Link to overview](https://github.com/TediDika/Portfolio/blob/main/Homework01/Overview%20of%20Assignment%201.pdf)
 
 ## Assignment 2 - Word Guessing Game
-[This program](https://github.com/TediDika/Portfolio/blob/main/Homework02/Homework02_txd190008.py) uses the Natural Language Toolkit (NLTK) python library to preprocess text, by first tokenizing the text and then removing stop words and non-alphabetic charachters, lemmatizing, and extracting nouns. It randomly selects one of these nouns in a guessing game. To run the program make sure to set the filepath of your data as a sys arg.
+[This program](https://github.com/TediDika/Portfolio/blob/main/Homework02/Homework2_txd190008.py) uses the Natural Language Toolkit (NLTK) python library to preprocess text, by first tokenizing the text and then removing stop words and non-alphabetic charachters, lemmatizing, and extracting nouns. It randomly selects one of these nouns in a guessing game. To run the program make sure to set the filepath of your data as a sys arg.
 
 ## Assignment 3 - WordNet
-In this [Jupyter notebook](https://github.com/TediDika/NLP-Portfolio/blob/main/Homework03/Homework03.ipynb) I explore the NLTK WordNet and SentiWordNet functions and how we can use them to allow machines to understand relationships between text and perform functions like word similarity, sentiment analysis, and collocation identification.
+In this [Jupyter notebook](https://github.com/TediDika/NLP-Portfolio/blob/main/Homework03/Homework3.ipynb) I explore the NLTK WordNet and SentiWordNet functions and how we can use them to allow machines to understand relationships between text and perform functions like word similarity, sentiment analysis, and collocation identification.
 
 ## Assignment 4 - N-Gram Language Model
 This assignment uses n-grams to predict which langauge given text is in. This assignment has two programs. The [first program](https://github.com/TediDika/Portfolio/blob/main/Homework04/program1.py) creates bigram and unigram dictionaries for English, French, and Italian using the provided training data where the key is the unigram or bigram text and the value is the count of that unigram or bigram in the data. The [second program](https://github.com/TediDika/Portfolio/blob/main/Homework04/program2.py) feeds in the test data and calculates probabilities for each language line-by-line and outputs accuracy. [This narrative](https://github.com/TediDika/Portfolio/blob/main/Homework04/Assignment%204%20-%20Narrative.pdf) delves deeper into the utility of n-grams.
