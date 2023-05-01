@@ -1,8 +1,10 @@
 # NLP Portfolio
 Portfolio for CS 4395.
 
-Here is a link to my [Overview of NLP](https://github.com/TediDika/Portfolio/blob/2e020b2ac6798997eac8dca945fe975800562157/Overview%20of%20NLP.pdf)
+[Click here](https://github.com/TediDika/NLP-Portfolio/blob/main/ResumePage.md) to see the technical and soft skills I gained from this class.
 
+## Overview of NLP
+Here is a link to my [Overview of NLP](https://github.com/TediDika/Portfolio/blob/2e020b2ac6798997eac8dca945fe975800562157/Overview%20of%20NLP.pdf)
 
 ## Assignment 1 - Text Processing
 In [this assignment](https://github.com/TediDika/Portfolio/blob/main/Homework01/Homework1_txd190008.py) I gained experience with processing text from a csv file using regex and pickling files in python. [Link to overview](https://github.com/TediDika/Portfolio/blob/main/Homework01/Overview%20of%20Assignment%201.pdf)
@@ -33,3 +35,6 @@ In [this assignment](https://github.com/TediDika/NLP-Portfolio/blob/main/Homewor
 
 ## Assignment 10 - Deep Learning Text Classification
 In [this assignment](https://github.com/TediDika/NLP-Portfolio/blob/main/Homework10/TextClassification2.ipynb) I learned how to perform text classification using various deep learning models such as RNN, CNN, and embeddings. My goal was to classify tweets as being written by a male or female.
+
+## Summary
+Through this NLP class, I discovered the exciting potential of NLP to make a real-world impact. With each project, I gained hands-on experience with cutting-edge machine learning frameworks and technologies, including those used by virtual assistants, email spam filters, and chatbots like GPT. Looking ahead, I'm eager to explore ways that NLP can be leveraged to benefit my local community and loved ones through personal projects. To stay current with the rapidly-evolving field, I plan to use research papers and to attend NLP-related conferences. I am excited by the possibility of a career in NLP and the ever-growing possibilities of the field.
