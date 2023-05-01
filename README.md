@@ -1,7 +1,7 @@
 # NLP Portfolio
 Portfolio for CS 4395.
 
-[Click here](./ResumePage.md) to see the technical and soft skills I gained from this class.
+[Click here](https://github.com/TediDika/NLP-Portfolio/blob/main/ResumePage.html) to see the technical and soft skills I gained from this class.
 
 ## Overview of NLP
 Here is a link to my [Overview of NLP](https://github.com/TediDika/Portfolio/blob/2e020b2ac6798997eac8dca945fe975800562157/Overview%20of%20NLP.pdf)
